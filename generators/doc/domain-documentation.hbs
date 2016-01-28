@@ -1,0 +1,50 @@
+{{>header }}
+<div class="row indigo darken-1">
+		<h1 class="col s12 center-align white-text">{{name}}</h1>
+</div>
+<div class="container">
+
+		<p class="flow-text">
+			{{markdown description}}
+		</p>
+		<h3>Relations</h3>
+		<ul class="collection">
+			{{#each Relations}}
+				<li class="collection-item"><a href="{{this}}.html">{{this}}</a></li>
+			{{/each}}
+		</ul>
+
+		<h3>Fields</h3>
+		<table class="striped">
+			<thead>
+			<tr>
+				<th>
+					Name
+				</th>
+				<th>
+					Type
+				</th>
+				<th>
+					Description
+				</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			{{#each Fields}}
+				<tr>
+					<td>
+						{{name}}
+					</td>
+					<td>
+						{{type}}
+					</td>
+					<td>
+						{{description}}
+					</td>
+				</tr>
+			{{/each}}
+		</tbody>
+		</table>
+</div>
+{{>footer}}

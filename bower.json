@@ -1,0 +1,7 @@
+{
+  "name": "clay-model-documentation",
+  "version": "0.0.1",
+  "dependencies": {
+    "viz.js": "~2.1.3",
+  }
+}

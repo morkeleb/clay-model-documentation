@@ -1,0 +1,6 @@
+AllTypes:
+  - template: 'domain-documentation.hbs'
+    file: 'public/type/{{name}}.html'
+WithTypes:
+  - template: 'index.html'
+    file: 'public/index.html'
