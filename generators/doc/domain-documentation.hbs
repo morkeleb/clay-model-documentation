@@ -10,12 +10,14 @@
 		<div class="flow-text">
 			{{markdown description}}
 		</div>
+		{{#if Relations}}
 		<h3>Relations</h3>
 		<ul class="collection">
 			{{#each Relations}}
 				<li class="collection-item"><a href="{{this}}.html">{{this}}</a></li>
 			{{/each}}
 		</ul>
+		{{/if}}
 
 		<h3>Fields</h3>
 		<table class="striped">
