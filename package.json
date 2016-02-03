@@ -1,0 +1,11 @@
+{
+  "name": "clay-model-documentation",
+  "version": "0.0.0",
+  "description": "a documentation generator for clay",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Morten Nielsen",
+  "license": "ISC"
+}
