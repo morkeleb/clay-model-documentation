@@ -1,0 +1,14 @@
+{
+    "partials":["partials/footer.html", "partials/header.html"],
+    "steps":[
+      {
+        "generate": "public/type/",
+        "select": "$.model.types.*"
+      },
+      {
+        "generate": "public/",
+        "select": "$.model.types"
+      }
+    ]
+  }
+  
