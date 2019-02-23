@@ -15,7 +15,7 @@
     </div>
     <div class="row">
   		<ul  class="col s12 collection">
-  			{{#each Types}}
+  			{{#each types}}
   				<li class="collection-item"><a href="type/{{name}}.html">{{name}}</a></li>
   			{{/each}}
   		</ul>
@@ -24,9 +24,9 @@
       <div class="col s12">
         <script>
         var graph = "digraph g {"+
-        {{#each Types}}
+        {{#each types}}
           "{{name}}[shape=box, style=filled, color=mediumpurple, fontcolor=white,URL=\"type/{{name}}.html\"];"+
-          {{#each Relations}}
+          {{#each relations}}
   				    "{{../name}} -> {{this}} [color=gray];"+
             {{/each}}
   			{{/each}}

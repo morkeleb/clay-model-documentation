@@ -3,7 +3,8 @@
     "steps":[
       {
         "generate": "public/type/",
-        "select": "$.model.types.*"
+        "select": "$.model.types.*",
+        "target": "type"
       },
       {
         "generate": "public/",
