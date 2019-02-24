@@ -15,6 +15,9 @@
       },
       {
         "runCommand": "dot types.dot -Tsvg -o images/types.svg"
+      },
+      {
+        "runCommand": "rm types.dot"
       }
     ]
   }
