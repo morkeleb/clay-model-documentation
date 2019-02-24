@@ -2,7 +2,7 @@
     "partials":["templates/partials/footer.html", "templates/partials/header.html"],
     "steps":[
       {
-        "generate": "templates/public/type/",
+        "generate": "templates/type/",
         "select": "$.model.types.*",
         "target": "type"
       },
