@@ -31,8 +31,8 @@
             {
               "name": "test"
             }
-          ]
-          
+          ],
+          "relations":["product"]
         },
         {
           "name": "product",
