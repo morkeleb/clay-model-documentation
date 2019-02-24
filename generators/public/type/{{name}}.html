@@ -17,6 +17,24 @@
 				<li class="collection-item"><a href="{{this}}.html">{{this}}</a></li>
 			{{/each}}
 		</ul>
+        {{/if}}
+        
+        {{#if commands}}
+		<h3>commands</h3>
+		<ul class="collection">
+			{{#each commands}}
+				<li class="collection-item">{{this.name}}</li>
+			{{/each}}
+		</ul>
+        {{/if}}
+        
+        {{#if events}}
+		<h3>events</h3>
+		<ul class="collection">
+			{{#each events}}
+				<li class="collection-item">{{this.name}}</li>
+			{{/each}}
+		</ul>
 		{{/if}}
 
 		<h3>Fields</h3>

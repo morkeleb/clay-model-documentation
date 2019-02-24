@@ -26,7 +26,7 @@
         var graph = "digraph g {"+
         {{#each types}}
           "{{name}}[shape=box, style=filled, color=mediumpurple, fontcolor=white,URL=\"type/{{name}}.html\"];"+
-          {{#each relations}}
+          {{#each relations }}
   				    "{{../name}} -> {{this}} [color=gray];"+
             {{/each}}
   			{{/each}}
