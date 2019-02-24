@@ -8,7 +8,13 @@
       },
       {
         "generate": "templates/public/",
-        "select": "$.model.types"
+        "select": "$.model"
+      },
+      {
+        "runCommand": "mkdir -p images"
+      },
+      {
+        "runCommand": "dot types.dot -Tsvg -o images/types.svg"
       }
     ]
   }

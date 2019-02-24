@@ -10,7 +10,8 @@
     </div>
     <div class="row">
       <div  class="col s12 center-align">
-        <div id="graph" style="overflow: scroll; border: 1pt solid #eeeeee;"></div>
+        <object id="graph" data="images/types.svg" style="overflow: scroll; border: 1pt solid #eeeeee;">
+        </object>
       </div>
     </div>
     <div class="row">
@@ -19,24 +20,6 @@
   				<li class="collection-item"><a href="type/{{name}}.html">{{name}}</a></li>
   			{{/each}}
   		</ul>
-    </div>
-    <div class="row">
-      <div class="col s12">
-        <script>
-        var graph = "digraph g {"+
-        {{#each types}}
-          "{{name}}[shape=box, style=filled, color=mediumpurple, fontcolor=white,URL=\"type/{{name}}.html\"];"+
-          {{#each relations }}
-  				    "{{../name}} -> {{this}} [color=gray];"+
-            {{/each}}
-  			{{/each}}
-        "}";
-
-        image = Viz(graph, { format: "svg" });
-        $('#graph').append(image);
-
-        </script>
-      </div>
     </div>
   </div>
 </div>
