@@ -5,8 +5,8 @@ digraph g {
     {{entity}}[shape=box, style=filled, color=mediumpurple, fontcolor=white,URL="../type/{{entity}}.html", target="_top"];
 
     {{actor}}->{{entity}}[label="{{inc @index}} {{action}}"];
-    {{#if target_entity}}
-    {{entity}}->{{target_entity}}[label="{{inc @index}} to"]
-    {{/if}}
+      {{#if target_entity}}
+        {{entity}}->{{target_entity}}[label="{{inc @index}} to"]
+      {{/if}}
   {{/each}}
 }
