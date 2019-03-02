@@ -10,10 +10,4 @@ digraph g {
     {{entity}}->{{target_entity}}[label="{{inc @index}} to"]
     {{/if}}
   {{/each}}
-  {{#each types}}
-    {{name}}[shape=box, style=filled, color=mediumpurple, fontcolor=white,URL="../type/{{name}}.html", target="_top"];
-      {{#each relations }}
-        {{../name}} -> {{this}} [color=gray];
-      {{/each}}
-  {{/each}}
 }
