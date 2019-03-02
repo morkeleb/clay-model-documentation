@@ -1,0 +1,19 @@
+digraph g {
+
+  {{#each steps}}
+    //{{actor}}[shape=box, style=filled, color=mediumgreen, fontcolor=white,URL="../actors/{{actor}}.html", target="_top"];
+    {{actor}}[shape=box, style=filled, color=mediumgreen, fontcolor=white,URL="../actors/{{actor}}.html", target="_top"];
+    {{entity}}[shape=box, style=filled, color=mediumpurple, fontcolor=white,URL="../type/{{entity}}.html", target="_top"];
+
+    {{actor}}->{{entity}}[label="{{inc @index}} {{action}}"];
+    {{#if target_entity}}
+    {{entity}}->{{target_entity}}[label="{{inc @index}} to"]
+    {{/if}}
+  {{/each}}
+  {{#each types}}
+    {{name}}[shape=box, style=filled, color=mediumpurple, fontcolor=white,URL="../type/{{name}}.html", target="_top"];
+      {{#each relations }}
+        {{../name}} -> {{this}} [color=gray];
+      {{/each}}
+  {{/each}}
+}

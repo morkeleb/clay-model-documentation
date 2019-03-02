@@ -39,6 +39,34 @@
           "mixin": ["has_created"],
           "events": []
         }
+      ],
+      "actors": [{"name":"supplier"},{"name":"customer"},{"name":"admin"}],
+      "stories":[{
+        "name":"myfirststory",
+        "steps": [
+          {
+            "actor":"supplier",
+            "action":"creates",
+            "entity":"product"
+          },
+          {
+            "actor":"supplier",
+            "action":"adds",
+            "entity":"stock"
+          },
+          {
+            "actor":"customer",
+            "action":"creates",
+            "entity":"order"
+          },
+          {
+            "actor":"customer",
+            "action":"adds",
+            "entity":"product",
+            "target_entity": "order"
+          }
+        ]
+        }
       ]
     }
   }

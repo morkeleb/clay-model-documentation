@@ -7,6 +7,16 @@
         "target": "type"
       },
       {
+        "generate": "templates/actors/",
+        "select": "$.model.actors.*",
+        "target": "actors"
+      },
+      {
+        "generate": "templates/stories/",
+        "select": "$.model.stories.*",
+        "target": "stories"
+      },
+      {
         "generate": "templates/public/",
         "select": "$.model"
       },
@@ -17,7 +27,11 @@
         "runCommand": "dot types.dot -Tsvg -o images/types.svg"
       },
       {
-        "runCommand": "rm types.dot"
+        "runCommand": "dot stories/story-{{name}}.dot -Tsvg -o images/story-{{name}}.svg",
+        "select": "$.model.stories.*"
+      },
+      {
+        "runCommand": "find . -name '*.dot' | xargs rm"
       }
     ]
   }

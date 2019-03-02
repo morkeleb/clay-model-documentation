@@ -1,0 +1,20 @@
+{{>header }}
+
+    <div class="row teal darken-1">
+		    <h1 class="col s12 center-align white-text">Domain</h1>
+    </div>
+    <div class="container">
+
+    <div class="row">
+		<h2  class="col s12">Actors</h2>
+    </div>
+    <div class="row">
+  		<ul  class="col s12 collection">
+  			{{#each actors}}
+  				<li class="collection-item"><a href="actors/{{name}}.html">{{name}}</a></li>
+  			{{/each}}
+  		</ul>
+    </div>
+  </div>
+</div>
+{{>footer}}
