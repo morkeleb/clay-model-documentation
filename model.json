@@ -42,7 +42,7 @@
       ],
       "actors": [{"name":"supplier"},{"name":"customer"},{"name":"admin"}],
       "stories":[{
-        "name":"myfirststory",
+        "name":"my first story",
         "steps": [
           {
             "actor":"supplier",

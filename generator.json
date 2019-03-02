@@ -27,7 +27,7 @@
         "runCommand": "dot types.dot -Tsvg -o images/types.svg"
       },
       {
-        "runCommand": "dot stories/story-{{name}}.dot -Tsvg -o images/story-{{name}}.svg",
+        "runCommand": "dot stories/story-{{snakeCase name}}.dot -Tsvg -o images/story-{{snakeCase name}}.svg",
         "select": "$.model.stories.*"
       },
       {
