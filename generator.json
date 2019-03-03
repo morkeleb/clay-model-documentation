@@ -2,6 +2,10 @@
     "partials":["templates/partials/footer.html", "templates/partials/header.html"],
     "steps":[
       {
+        "copy":"icons",
+        "target":"images/icons"
+      },
+      {
         "generate": "templates/type/",
         "select": "$.model.types.*",
         "target": "type"
@@ -24,10 +28,13 @@
         "runCommand": "mkdir -p images"
       },
       {
+        "runCommand": "mv stories/*.dot images/"
+      },
+      {
         "runCommand": "dot types.dot -Tsvg -o images/types.svg"
       },
       {
-        "runCommand": "dot stories/story-{{snakeCase name}}.dot -Tsvg -o images/story-{{snakeCase name}}.svg",
+        "runCommand": "cd images && dot story-{{snakeCase name}}.dot -Tsvg -o story-{{snakeCase name}}.svg",
         "select": "$.model.stories.*"
       },
       {

@@ -1,7 +1,7 @@
 digraph g {
 
   {{#each steps}}
-    {{actor}}[shape=box, style=filled, color=mediumgreen, fontcolor=white,URL="../actors/{{actor}}.html", target="_top"];
+    {{actor}}[shape=none,URL="/actors/{{actor}}.html", target="_top", image="icons/user.svg", height="0.75", label="{{actor}}", labelloc=b];
     {{entity}}[shape=box, style=filled, color=mediumpurple, fontcolor=white,URL="../type/{{entity}}.html", target="_top"];
 
     {{actor}}->{{entity}}[label="{{inc @index}} {{action}}"];
